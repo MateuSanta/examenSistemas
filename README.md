@@ -1,7 +1,7 @@
-# examenSistemas
-examen
+# Examen Sistemas
 
-### Introducción
+
+## Introducción
 
 En este documento explicaré los pasos que he realizado para hacer el examen práctico de sistemas, consistirá en usar docker-compose para crear 3 imagenes que puedan desplegar mi proyecto.
 
@@ -19,7 +19,7 @@ Las 3 imágenes consistirán en:
    La capa de datos: El servidor de datos usado será mysql server
    
    
- ### Configuración del docker-compose.yml
+ ## Configuración del docker-compose.yml
  
  ![Captura desde 2022-06-07 19-48-28](https://user-images.githubusercontent.com/91744614/172449066-7cf739a7-18b9-4331-9a79-f0bc16cbe96f.png)
  
@@ -44,23 +44,23 @@ Las 3 imágenes consistirán en:
 
  
  
- ### Pasos para el despliegue de la aplicación
+ ## Pasos para el despliegue de la aplicación
  
- ## 1. Eliminar contenedores existentes
+ ### 1. Eliminar contenedores existentes
  
  Primero eliminar contenedores para que no haya conflicto de ningún tipo.
  
  ![1-eliminarContenedores](https://user-images.githubusercontent.com/91744614/172451846-ae9e305a-7778-4529-8539-5fb23f7ada16.png)
 
  
- ## 2. Elminar todas las imagenes
+ ### 2. Elminar todas las imagenes
  
 Eliminar imagenes previas para poder descargar nuevamente las correspondientes.
  
 ![2-eliminarImagenes](https://user-images.githubusercontent.com/91744614/172451855-a7c28d2e-aa0c-4be5-b499-8d7731dbb79d.png)
 
  
- ## 3. Ejecutar docker-compose.yml
+ ### 3. Ejecutar docker-compose.yml
  
  Con el comando ``sudo docker-compose up -d`` ejecutaremos el archivo docker-compose.yml de la carpeta en que estemos.
  Como no tenemos las imagenes se descargarán de nuevo en docker hub automáticamente.
@@ -68,14 +68,14 @@ Eliminar imagenes previas para poder descargar nuevamente las correspondientes.
  ![3-docker-composeup](https://user-images.githubusercontent.com/91744614/172451862-88e0953b-f74a-43ad-896c-06421f3706d1.png)
 
  
- ## 4. Hacer login en docker hub
+ ### 4. Hacer login en docker hub
  
  Usar el comando ``sudo docker login`` para logearse en docker hub.
  
  ![4-docker-login](https://user-images.githubusercontent.com/91744614/172452712-9a16786b-b7d9-4082-b3a7-a07befb24651.png)
 
  
-  ## 5. Subir las imagenes a Docker Hub
+  ### 5. Subir las imagenes a Docker Hub
   
   Utilizaremos los siguientes comandos en las 3 imagenes para agregar un tag a nuestra imagen para despues poder hacer un push
   
@@ -94,7 +94,7 @@ Eliminar imagenes previas para poder descargar nuevamente las correspondientes.
    
    https://hub.docker.com/repository/docker/msantandreu/sic.nginx
    
-   ### Conclusiones y pruebas
+   ## Conclusiones y pruebas
    
    Vemos que en localhost gracias al ``nginx`` nos conecta a nuestra página web.
    ![Captura desde 2022-06-07 20-36-14](https://user-images.githubusercontent.com/91744614/172457449-23a1ebe6-365d-45df-9319-253bfebbd25c.png)
